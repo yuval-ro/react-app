@@ -18,6 +18,7 @@ export default function ServerProvider({ children }) {
     const auth = useAuthService();
     const resource = useResourceService();
     const isSignedIn = (userProfileData && userProfileData !== null);
+    const hasAppData = assignmentsData && userProfileData;
 
     const fetchAndLoadAppData = async () => {
         const uri = resource.instance.getUri().slice(0, -1);
@@ -104,7 +105,10 @@ export default function ServerProvider({ children }) {
     useEffect(() => {
         (async () => {
             const res = await auth.validateRt.send();
-            if (!res.ok && isSignedIn) {
+            if (res.ok && !hasAppData) {
+                await fetchAndLoadAppData();
+            }
+            else if (!res.ok && isSignedIn) {
                 // Refresh token is no longer valid => sign out.
                 ejectAppData();
             }
