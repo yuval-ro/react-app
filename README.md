@@ -15,6 +15,13 @@ The app is styled with Bootstrap, offering a clean and modern design that enhanc
 ## JWT Authentication Startegy
 <img src=".github/authStrat.png" />
 
+## Screenshots
+<img src=".github/Selection_001.png" />
+<img src=".github/Selection_002.png" />
+<img src=".github/Selection_003.png" />
+<img src=".github/Selection_004.png" />
+<img src=".github/Selection_005.png" />
+
 ## Legal
 Copyright (C) 2025  Yuval .R.  
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
